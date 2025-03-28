@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Agreement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .popup-container {
+            background: #f8f9fa;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: opacity 0.5s ease-out, height 0.5s ease-out, margin-bottom 0.5s ease-out;
+        }
+        .popup-container.hidden {
+            opacity: 0;
+            height: 0;
+            margin-bottom: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .button-container {
+            margin-top: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="popup" class="popup-container">
+        <p>By continuing, you agree to our Terms and Privacy Policy.</p>
+        <div class="button-container">
+            <button onclick="hidePopup()">Agree</button>
+            <button onclick="hidePopup()">Disagree</button>
+        </div>
+    </div>
+
+    <script>
+        function hidePopup() {
+            document.getElementById("popup").classList.add("hidden");
+        }
+    </script>
+
+</body>
+</html>
